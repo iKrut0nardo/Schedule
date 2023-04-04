@@ -18,8 +18,9 @@ struct NextView: View {
     @State private var autoWeektype = getAutoWeekType()
     
     var body: some View {
-        TabView(selection: $selection) {
-            // Вкладка с контентом
+        NavigationView{
+            TabView(selection: $selection) {
+                // Вкладка с контентом
                 VStack {
                     Text(getCurrentWeekName())
                         .bold()
@@ -49,49 +50,51 @@ struct NextView: View {
                     }
                     
                 }
-            .onAppear {
-                loadLessons()
-            }
-            .onChange(of: selectedWeekType) { _ in
-                loadLessons()
-            }
-            .tabItem {
-                Image(systemName: "square.grid.2x2.fill")
-                Text("Текущий день")
-            }.tag(1)
-            // Вкладка с настройками
-            VStack{
-                List {
-                    Picker("Week Type", selection: $selectedWeekType) {
-                        Text("Верхняя неделя").tag("Верхняя неделя")
-                        Text("Нижняя неделя").tag("Нижняя неделя")
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-                    ForEach(Weekday.allCases, id: \.self) { weekday in
-                        Section(header: Text(weekday.rawValue)) {
-                            ForEach(getLessonsForWeekday(weekday: weekday), id: \.self) { lesson in
-                                VStack(alignment: .leading) {
-                                    Text("\(lesson.subjectName)")
-                                    Text("\(lesson.time), \(lesson.roomNumber), \(lesson.sybjectType)")
-                                        .font(.caption)
-                                        .foregroundColor(.secondary)
+                .onAppear {
+                    loadLessons()
+                }
+                .onChange(of: selectedWeekType) { _ in
+                    loadLessons()
+                }
+                .tabItem {
+                    Image(systemName: "square.grid.2x2.fill")
+                    Text("Текущий день")
+                }.tag(1)
+                
+                // Вкладка с настройками
+                VStack{
+                    List {
+                        Picker("Week Type", selection: $selectedWeekType) {
+                            Text("Верхняя неделя").tag("Верхняя неделя")
+                            Text("Нижняя неделя").tag("Нижняя неделя")
+                        }.pickerStyle(SegmentedPickerStyle())
+                        ForEach(Weekday.allCases, id: \.self) { weekday in
+                            Section(header: Text(weekday.rawValue)) {
+                                ForEach(getLessonsForWeekday(weekday: weekday), id: \.self) { lesson in
+                                    VStack(alignment: .leading) {
+                                        Text("\(lesson.subjectName)")
+                                        Text("\(lesson.time), \(lesson.roomNumber), \(lesson.sybjectType)")
+                                            .font(.caption)
+                                            .foregroundColor(.secondary)
+                                    }
                                 }
                             }
                         }
+                        
                     }
                     
                 }
-                
+                .tabItem {
+                    Image(systemName: "star")
+                    Text("Вся неделя")
+                }.tag(2)
             }
-            .tabItem {
-                Image(systemName: "star")
-                Text("Вся неделя")
-            }.tag(2)
+            .navigationTitle(selection == 1 ? "Сегодня" : "Расписание")
+            .navigationBarBackButtonHidden(true)
+            .navigationBarTitleDisplayMode(.automatic)
+            .navigationViewStyle(StackNavigationViewStyle())
         }
-        .navigationTitle(selection == 1 ? "Сегодня" : "Расписание")
-        .navigationBarBackButtonHidden(true)
-        .navigationBarTitleDisplayMode(.large)
-        .navigationViewStyle(StackNavigationViewStyle())
+        
     }
     
     func loadLessons() {
