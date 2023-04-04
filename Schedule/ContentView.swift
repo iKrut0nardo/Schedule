@@ -71,7 +71,7 @@ struct ContentView: View {
                 UserDefaults.standard.set(selectedCourse, forKey: "SelectedCourse")
                 UserDefaults.standard.set(selectedGroup, forKey: "SelectedGroup")
             }
-            //.navigationBarTitle("Выбирите опции")
+            
             .onAppear(perform: {
                 // Load selected values from UserDefaults
                                 if let savedFaculty = UserDefaults.standard.string(forKey: "SelectedFaculty") {
