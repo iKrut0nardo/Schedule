@@ -18,9 +18,10 @@ struct NextView: View {
     @State private var autoWeektype = getAutoWeekType()
     
     var body: some View {
-        NavigationView{
-            TabView(selection: $selection) {
-                // Вкладка с контентом
+        
+        TabView(selection: $selection) {
+            // Вкладка с контентом
+            NavigationView{
                 VStack {
                     Text(getCurrentWeekName())
                         .bold()
@@ -50,18 +51,21 @@ struct NextView: View {
                     }
                     
                 }
-                .onAppear {
-                    loadLessons()
-                }
-                .onChange(of: selectedWeekType) { _ in
-                    loadLessons()
-                }
-                .tabItem {
-                    Image(systemName: "square.grid.2x2.fill")
-                    Text("Текущий день")
-                }.tag(1)
-                
-                // Вкладка с настройками
+                .navigationTitle(selection == 1 ? "Сегодня" : "Расписание")
+            }
+            .onAppear {
+                loadLessons()
+            }
+            .onChange(of: selectedWeekType) { _ in
+                loadLessons()
+            }
+            .tabItem {
+                Image(systemName: "square.grid.2x2.fill")
+                Text("Текущий день")
+            }.tag(1)
+            
+            // Вкладка с настройками
+            NavigationView{
                 VStack{
                     List {
                         Picker("Week Type", selection: $selectedWeekType) {
@@ -84,16 +88,14 @@ struct NextView: View {
                     }
                     
                 }
-                .tabItem {
-                    Image(systemName: "star")
-                    Text("Вся неделя")
-                }.tag(2)
+                .navigationTitle(selection == 1 ? "Сегодня" : "Расписание")
             }
-            .navigationTitle(selection == 1 ? "Сегодня" : "Расписание")
-            .navigationBarBackButtonHidden(true)
-            .navigationBarTitleDisplayMode(.automatic)
-            .navigationViewStyle(StackNavigationViewStyle())
+            .tabItem {
+                Image(systemName: "star")
+                Text("Вся неделя")
+            }.tag(2)
         }
+            .navigationBarBackButtonHidden(true)
         
     }
     
