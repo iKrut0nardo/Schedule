@@ -38,7 +38,6 @@ struct ContentView: View {
                         Text($0)
                     }
                 }
-                    
                 
                 
                 // Dropdown for course selection
