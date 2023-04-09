@@ -11,8 +11,8 @@ func connectToDatabase() -> OpaquePointer? {
         print("error opening database")
         return nil
     } else {
-        print("database opened successfully")
-        print("Database path: \(path)")
+        //print("database opened successfully")
+        //print("Database path: \(path)")
         return db
     }
 }

@@ -28,16 +28,23 @@ struct NextView: View {
                 // Вкладка с контентом
                     TodayView(selectedGroup: selectedGroup)
                     .tabItem {
-                        Image(systemName: "square.grid.2x2.fill")
+                        Image(systemName: "star")
                         Text("Текущий день")
                     }.tag(Tabs.Сегодня)
                 
                 // Вкладка с настройками
                     ScheduleView(selectedGroup: selectedGroup)
                     .tabItem {
-                        Image(systemName: "star")
+                        Image(systemName: "house.fill")
                         Text("Вся неделя")
                     }.tag(Tabs.Расписание)
+                    
+                //Вкладка с сайта
+                    PDFViewer()
+                    .tabItem{
+                        Image(systemName: "display.and.arrow.down")
+                        Text("На сайте")
+                    }
             }
             .navigationBarHidden(true)
         }
