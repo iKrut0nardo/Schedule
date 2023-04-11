@@ -40,10 +40,10 @@ struct NextView: View {
                     }.tag(Tabs.Расписание)
                     
                 //Вкладка с сайта
-                    PDFViewer()
+                    NewsWebView(urlString: "https://news.bstu.by")
                     .tabItem{
                         Image(systemName: "display.and.arrow.down")
-                        Text("На сайте")
+                        Text("Новости")
                     }
             }
             .navigationBarHidden(true)
@@ -82,12 +82,14 @@ func getAutoWeekType() -> String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd"
     let septemberFirst = dateFormatter.date(from: "2023-09-01")! // задаем 1 сентября
-    let daysFromSeptemberFirst = Int(Date().timeIntervalSince(septemberFirst)) / (24 * 60 * 60)
-    let currentWeekNumber = daysFromSeptemberFirst / 7 + 1 // вычисляем номер текущей недели
-    if currentWeekNumber % 2 == 1 {
+    let daysFromSeptemberFirst = Int(Date().timeIntervalSince(septemberFirst)) / (24 * 60 * 60) + 1 // добавляем 1 день, чтобы учесть 1 сентября
+    let currentWeekNumber = Int((Double(daysFromSeptemberFirst) / 7.0).rounded(.up))
+    //print(currentWeekNumber)// округляем до ближайшего целого числа
+    if currentWeekNumber % 2 == 0 {
         return "Верхняя неделя"
     } else {
         return "Нижняя неделя"
     }
 }
+
 

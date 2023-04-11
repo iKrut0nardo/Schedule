@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		086CFAD529E171BF00F35977 /* PDFViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086CFAD429E171BF00F35977 /* PDFViewer.swift */; };
+		086CFAD529E171BF00F35977 /* NewsWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086CFAD429E171BF00F35977 /* NewsWebView.swift */; };
 		08851BC429B1250B008BDFB8 /* ScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08851BC329B1250B008BDFB8 /* ScheduleApp.swift */; };
 		08851BC629B1250B008BDFB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08851BC529B1250B008BDFB8 /* ContentView.swift */; };
 		08851BC829B1250C008BDFB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08851BC729B1250C008BDFB8 /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		08604C5A29DA349E00B5BC25 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		086CFAD429E171BF00F35977 /* PDFViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewer.swift; sourceTree = "<group>"; };
+		086CFAD429E171BF00F35977 /* NewsWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWebView.swift; sourceTree = "<group>"; };
 		08851BC029B1250B008BDFB8 /* Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08851BC329B1250B008BDFB8 /* ScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleApp.swift; sourceTree = "<group>"; };
 		08851BC529B1250B008BDFB8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 				08851BD829B13B34008BDFB8 /* NextView.swift */,
 				08DD8DDF29DD880D005D85CC /* TodayView.swift */,
 				08DD8DE129DD8B41005D85CC /* ScheduleView.swift */,
-				086CFAD429E171BF00F35977 /* PDFViewer.swift */,
+				086CFAD429E171BF00F35977 /* NewsWebView.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 				08851BC429B1250B008BDFB8 /* ScheduleApp.swift in Sources */,
 				08DD8DE229DD8B41005D85CC /* ScheduleView.swift in Sources */,
 				08DD8DE029DD880D005D85CC /* TodayView.swift in Sources */,
-				086CFAD529E171BF00F35977 /* PDFViewer.swift in Sources */,
+				086CFAD529E171BF00F35977 /* NewsWebView.swift in Sources */,
 				08851BD929B13B34008BDFB8 /* NextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
