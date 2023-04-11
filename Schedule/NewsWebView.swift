@@ -16,16 +16,4 @@ struct NewsWebView: UIViewRepresentable {
     func updateUIView(_ webView: WKWebView, context: Context) {}
 }
 
-struct NewsView: View {
-    let urlString = "https://news.bstu.by"
-    
-    var body: some View {
-        VStack {
-            Text("Новости БрГТУ")
-                .font(.largeTitle)
-                .padding()
-            NewsWebView(urlString: urlString)
-        }
-    }
-}
 
