@@ -28,7 +28,7 @@ struct TodayView: View {
                         alignment: .topLeading
                     )
                     .padding(.leading)
-                Text(getAutoWeekType())
+                Text(typeText())
                     .font(.none)
                     .bold()
                     .foregroundColor(.secondary)
@@ -100,6 +100,13 @@ struct Lesson: Hashable {
     let sybjectType: String
 }
 
-
+func typeText() -> String {
+    if getCurrentWeekName() == "Воскресенье" {
+        return "Выходной"
+    }
+    else{
+        return getAutoWeekType()
+    }
+}
 
 
