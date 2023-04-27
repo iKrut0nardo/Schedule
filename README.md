@@ -6,9 +6,8 @@
 #How to install app?
 
 1. Download the AltStore server on your pc https://altstore.io
-2. Download Shedule ipa file https://github.com/iKrut0nardo/Schedule/releases/tag/v1.0-beta.5.1
-3. Follow guide and install AltServer on your device.
-4. From device download ipa file https://github.com/iKrut0nardo/Schedule/releases/tag/v1.0-beta.5.1
-5. Open ipa via AltServer.
+2. Follow guide and install AltServer on your device.
+3. From device download ipa file https://github.com/iKrut0nardo/Schedule/releases/tag/v1.0-beta.5.1
+4. Open ipa via AltServer.
 
 *AltServer give your opportunity to resign apps every 7 days*
