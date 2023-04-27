@@ -82,7 +82,8 @@ enum Weekday: String, CaseIterable {
 func getAutoWeekType() -> String {
     let calendar = Calendar.current
     let currentWeekNumber = calendar.component(.weekOfYear, from: Date())
-    let currentWeekType = currentWeekNumber % 2 == 0 ? "Нижняя неделя" : "Верхняя неделя"
+    print(currentWeekNumber)
+    let currentWeekType = currentWeekNumber % 2 == 0 ? "Верхняя неделя" : "Нижняя неделя"
     return currentWeekType
 }
 

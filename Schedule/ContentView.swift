@@ -12,16 +12,18 @@ struct ContentView: View {
     let faculties = ["Пусто","ФЭИС", "ФИСЭ", "ЭФ", "МСФ"]
     let courses = ["Пусто","1 курс", "2 курс", "3 курс","4 курс", "5 курс"]
     let groups = ["Пусто"]
+    let subGroups = ["Пусто","1 подгруппа","2 подгруппа"]
     
     // Selected values from the dropdowns
     @State private var selectedFaculty = ""
     @State private var selectedCourse = ""
     @State private var selectedGroup = ""
+    @State private var selectedSubGroup = ""
     
     var availableGroups: [String] {
         switch (selectedFaculty, selectedCourse) {
         case ("ФЭИС", "3 курс"):
-            return ["Пусто","ПО6", "ПО7"]
+            return ["Пусто","ПО6","ПО7"]
         default:
             return groups
         }
@@ -54,21 +56,30 @@ struct ContentView: View {
                         Text($0)
                     }
                 }
-                
                 .disabled(selectedCourse.isEmpty)
+                
+                Picker("subGroup",  selection: $selectedSubGroup){
+                    ForEach(subGroups, id: \.self){
+                        Text($0)
+                    }
+                }
+                .disabled(selectedGroup.isEmpty)
+                
                 Spacer()
                 // Next button
-                NavigationLink(destination: NextView(selectedGroup: selectedGroup)) {
+                NavigationLink(destination: NextView(selectedGroup: selectedGroup, selectedSubGroup: selectedSubGroup)) {
                     Text("Далее").font(.largeTitle)
                 }
 
                 .disabled(selectedGroup.isEmpty)
+                .disabled(selectedSubGroup.isEmpty)
             }
             .onTapGesture {
                 // Save selected values to UserDefaults
                 UserDefaults.standard.set(selectedFaculty, forKey: "SelectedFaculty")
                 UserDefaults.standard.set(selectedCourse, forKey: "SelectedCourse")
                 UserDefaults.standard.set(selectedGroup, forKey: "SelectedGroup")
+                UserDefaults.standard.set(selectedSubGroup, forKey: "SelectedSubGroup")
             }
             
             .onAppear(perform: {
@@ -81,6 +92,9 @@ struct ContentView: View {
                                 }
                                 if let savedGroup = UserDefaults.standard.string(forKey: "SelectedGroup") {
                                     selectedGroup = savedGroup
+                                }
+                                if let savedSubGroup = UserDefaults.standard.string(forKey: "SelectedSubGroup"){
+                                    selectedSubGroup = savedSubGroup
                                 }
                             downloadDatabase()
                         })
