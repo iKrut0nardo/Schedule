@@ -3,7 +3,7 @@
 
 *work in progress*
 
-#How to install app?
+# How to install app?
 
 1. Download the AltStore server on your pc https://altstore.io
 2. Follow guide and install AltServer on your device.
