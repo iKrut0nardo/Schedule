@@ -19,6 +19,7 @@ struct NextView: View {
     @State var selectedTab: Tabs = .Сегодня
     
     var selectedGroup: String // группа выбранная на первой странице
+    var selectedSubGroup: String //погруппа выбранная на первой странице
     @State private var selectedWeekType = getAutoWeekType() // выбранный тип недели
     //@State private var lessons = [Lesson]()// array to store lesson names
     @State private var autoWeektype = getAutoWeekType()
@@ -26,14 +27,14 @@ struct NextView: View {
     var body: some View {
             TabView(selection: $selectedTab) {
                 // Вкладка с контентом
-                    TodayView(selectedGroup: selectedGroup)
+                TodayView(selectedGroup: selectedGroup, selectedSubGroup: selectedSubGroup)
                     .tabItem {
                         Image(systemName: "star")
                         Text("Текущий день")
                     }.tag(Tabs.Сегодня)
                 
                 // Вкладка с настройками
-                    ScheduleView(selectedGroup: selectedGroup)
+                ScheduleView(selectedGroup: selectedGroup, selectedSubGroup: selectedSubGroup)
                     .tabItem {
                         Image(systemName: "house.fill")
                         Text("Вся неделя")
@@ -54,9 +55,9 @@ struct NextView: View {
 
 struct NextView_Previews: PreviewProvider {
     @State static var selectedGroup = "ПО6"
-    
+    @State static var selectedSubGroup = "1 подгруппа"
     static var previews: some View {
-        NextView(selectedGroup:selectedGroup )
+        NextView(selectedGroup:selectedGroup, selectedSubGroup: selectedSubGroup)
             
     }
 }
@@ -79,16 +80,10 @@ enum Weekday: String, CaseIterable {
 }
 
 func getAutoWeekType() -> String {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd"
-    let septemberFirst = dateFormatter.date(from: "2023-09-01")! // задаем 1 сентября
-    let daysFromSeptemberFirst = Int(Date().timeIntervalSince(septemberFirst)) / (24 * 60 * 60) + 1 // добавляем 1 день, чтобы учесть 1 сентября
-    let currentWeekNumber = (daysFromSeptemberFirst - 1) / 7 + 1 // вычисляем номер текущей недели
-    if currentWeekNumber % 2 == 1 {
-        return "Верхняя неделя"
-    } else {
-        return "Нижняя неделя"
-    }
+    let calendar = Calendar.current
+    let currentWeekNumber = calendar.component(.weekOfYear, from: Date())
+    let currentWeekType = currentWeekNumber % 2 == 0 ? "Нижняя неделя" : "Верхняя неделя"
+    return currentWeekType
 }
 
 
