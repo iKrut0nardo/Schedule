@@ -20,6 +20,8 @@ struct ContentView: View {
     @State private var selectedGroup = ""
     @State private var selectedSubGroup = ""
     
+    @State private var draw = false//animation
+    
     var availableGroups: [String] {
         switch (selectedFaculty, selectedCourse) {
         case ("ФЭИС", "3 курс"):
@@ -28,11 +30,25 @@ struct ContentView: View {
             return groups
         }
     }
-    
+//    init() {
+//        printFonts()
+//    }
+//    func printFonts() {
+//        let fontFamilyNames = UIFont.familyNames
+//        for familyName in fontFamilyNames {
+//            print("_-----------")
+//            print ("Font Family name -> [\(familyName)]")
+//            let names = UIFont.fontNames (forFamilyName: familyName)
+//            print("Font names ==> [\(names)]")
+//        }
+//    }
     
     var body: some View {
         NavigationView {
             VStack {
+                Text("Расписание")
+                    .font(.custom("Zaychik", size: 65))
+                    .padding(EdgeInsets(top: 100, leading: 0, bottom: 40, trailing: 0))
                 Spacer()
                 // Dropdown for faculty selection
                 Picker("Faculty", selection: $selectedFaculty) {
@@ -40,7 +56,6 @@ struct ContentView: View {
                         Text($0)
                     }
                 }
-                
                 
                 // Dropdown for course selection
                 Picker("Course", selection: $selectedCourse) {
@@ -68,7 +83,8 @@ struct ContentView: View {
                 Spacer()
                 // Next button
                 NavigationLink(destination: NextView(selectedGroup: selectedGroup, selectedSubGroup: selectedSubGroup)) {
-                    Text("Далее").font(.largeTitle)
+                    Text("Далее")
+                        .font(.custom("Zaychik", size: 65))
                 }
 
                 .disabled(selectedGroup.isEmpty)
