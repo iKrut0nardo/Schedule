@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081BDB6E2A005E4E00E95B5B /* Zaychik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 081BDB6D2A005E4E00E95B5B /* Zaychik-Regular.ttf */; };
 		086CFAD529E171BF00F35977 /* NewsWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086CFAD429E171BF00F35977 /* NewsWebView.swift */; };
 		08851BC429B1250B008BDFB8 /* ScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08851BC329B1250B008BDFB8 /* ScheduleApp.swift */; };
 		08851BC629B1250B008BDFB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08851BC529B1250B008BDFB8 /* ContentView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		081BDB6D2A005E4E00E95B5B /* Zaychik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Zaychik-Regular.ttf"; sourceTree = "<group>"; };
 		08604C5A29DA349E00B5BC25 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		086CFAD429E171BF00F35977 /* NewsWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWebView.swift; sourceTree = "<group>"; };
 		08851BC029B1250B008BDFB8 /* Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		081BDB5D29FD4D0B00E95B5B /* project font */ = {
+			isa = PBXGroup;
+			children = (
+				081BDB6D2A005E4E00E95B5B /* Zaychik-Regular.ttf */,
+			);
+			path = "project font";
+			sourceTree = "<group>";
+		};
 		08851BB729B1250B008BDFB8 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 				08851BC929B1250C008BDFB8 /* Preview Content */,
 				08851BD829B13B34008BDFB8 /* NextView.swift */,
 				08DD8DDF29DD880D005D85CC /* TodayView.swift */,
+				081BDB5D29FD4D0B00E95B5B /* project font */,
 				08DD8DE129DD8B41005D85CC /* ScheduleView.swift */,
 				086CFAD429E171BF00F35977 /* NewsWebView.swift */,
 			);
@@ -123,7 +134,7 @@
 			};
 			buildConfigurationList = 08851BBB29B1250B008BDFB8 /* Build configuration list for PBXProject "Schedule" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -149,6 +160,7 @@
 			files = (
 				08851BCB29B1250C008BDFB8 /* Preview Assets.xcassets in Resources */,
 				08851BC829B1250C008BDFB8 /* Assets.xcassets in Resources */,
+				081BDB6E2A005E4E00E95B5B /* Zaychik-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +309,7 @@
 				DEVELOPMENT_TEAM = W46P3Y5TYC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Schedule/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Schedule;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -332,6 +345,7 @@
 				DEVELOPMENT_TEAM = W46P3Y5TYC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Schedule/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Schedule;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
