@@ -11,6 +11,7 @@ import Foundation
 
 struct TodayView: View {
     
+    @Environment(\.presentationMode) var presentationMode
     var selectedGroup: String // группа выбранная на первой странице
     var selectedSubGroup: String
     @State private var selectedWeekType = getAutoWeekType() // выбранный тип недели
@@ -48,6 +49,15 @@ struct TodayView: View {
                 }
             }
             .navigationTitle("Сегодня")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(leading:
+                            Button(action: {
+                                presentationMode.wrappedValue.dismiss()
+                            }, label: {
+                                Image(systemName: "chevron.backward")
+                                Text("Назад")
+                            })
+                        )
         }
         .onAppear {
             loadLessons()
