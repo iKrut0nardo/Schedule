@@ -8,6 +8,8 @@ import SQLite3
 import SwiftUI
 import Foundation
 
+import UserNotifications
+
 
 struct TodayView: View {
     
@@ -102,6 +104,35 @@ struct TodayView: View {
             }
             sqlite3_finalize(statement)
             sqlite3_close(db)
+        }
+        scheduleNotifications()
+    }
+    
+    func scheduleNotifications() {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { granted, error in
+            if let error = error {
+                print("Error requesting authorization for user notifications: \(error.localizedDescription)")
+                return
+            }
+            if granted {
+                center.removeAllPendingNotificationRequests() // Удалить все предыдущие уведомления, если они есть
+                for lesson in lessons {
+                    let content = UNMutableNotificationContent()
+                    content.title = "Начало пары"
+                    content.body = "\(lesson.subjectName) в \(lesson.time) в аудитории \(lesson.roomNumber)"
+                    content.sound = UNNotificationSound.default
+                    let timeComponents = lesson.time.components(separatedBy: ":")
+                    let hour = Int(timeComponents[0]) ?? 0
+                    let minute = Int(timeComponents[1].prefix(2)) ?? 0
+                    var dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: Date())
+                    dateComponents.hour = hour
+                    dateComponents.minute = minute
+                    let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+                    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+                    center.add(request)
+                }
+            }
         }
     }
     
