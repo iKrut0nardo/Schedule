@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		081BDB6E2A005E4E00E95B5B /* Zaychik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 081BDB6D2A005E4E00E95B5B /* Zaychik-Regular.ttf */; };
+		081BDB702A01367300E95B5B /* SourceLink.json in Resources */ = {isa = PBXBuildFile; fileRef = 081BDB6F2A01367300E95B5B /* SourceLink.json */; };
+		081BDB722A01385D00E95B5B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 081BDB712A01385D00E95B5B /* Icon.png */; };
+		081BDB782A01396400E95B5B /* screen01.png in Resources */ = {isa = PBXBuildFile; fileRef = 081BDB742A01396400E95B5B /* screen01.png */; };
+		081BDB792A01396400E95B5B /* screen04.png in Resources */ = {isa = PBXBuildFile; fileRef = 081BDB752A01396400E95B5B /* screen04.png */; };
+		081BDB7A2A01396400E95B5B /* screen02.png in Resources */ = {isa = PBXBuildFile; fileRef = 081BDB762A01396400E95B5B /* screen02.png */; };
+		081BDB7B2A01396400E95B5B /* screen03.png in Resources */ = {isa = PBXBuildFile; fileRef = 081BDB772A01396400E95B5B /* screen03.png */; };
 		086CFAD529E171BF00F35977 /* NewsWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086CFAD429E171BF00F35977 /* NewsWebView.swift */; };
 		08851BC429B1250B008BDFB8 /* ScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08851BC329B1250B008BDFB8 /* ScheduleApp.swift */; };
 		08851BC629B1250B008BDFB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08851BC529B1250B008BDFB8 /* ContentView.swift */; };
@@ -21,6 +27,12 @@
 
 /* Begin PBXFileReference section */
 		081BDB6D2A005E4E00E95B5B /* Zaychik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Zaychik-Regular.ttf"; sourceTree = "<group>"; };
+		081BDB6F2A01367300E95B5B /* SourceLink.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SourceLink.json; sourceTree = "<group>"; };
+		081BDB712A01385D00E95B5B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		081BDB742A01396400E95B5B /* screen01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen01.png; sourceTree = "<group>"; };
+		081BDB752A01396400E95B5B /* screen04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen04.png; sourceTree = "<group>"; };
+		081BDB762A01396400E95B5B /* screen02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen02.png; sourceTree = "<group>"; };
+		081BDB772A01396400E95B5B /* screen03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen03.png; sourceTree = "<group>"; };
 		08604C5A29DA349E00B5BC25 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		086CFAD429E171BF00F35977 /* NewsWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWebView.swift; sourceTree = "<group>"; };
 		08851BC029B1250B008BDFB8 /* Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,9 +65,23 @@
 			path = "project font";
 			sourceTree = "<group>";
 		};
+		081BDB732A01394000E95B5B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				081BDB712A01385D00E95B5B /* Icon.png */,
+				081BDB6F2A01367300E95B5B /* SourceLink.json */,
+				081BDB742A01396400E95B5B /* screen01.png */,
+				081BDB762A01396400E95B5B /* screen02.png */,
+				081BDB772A01396400E95B5B /* screen03.png */,
+				081BDB752A01396400E95B5B /* screen04.png */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		08851BB729B1250B008BDFB8 = {
 			isa = PBXGroup;
 			children = (
+				081BDB732A01394000E95B5B /* Source */,
 				08604C5A29DA349E00B5BC25 /* README.md */,
 				08851BDF29B205FB008BDFB8 /* DatabaseHelper.swift */,
 				08851BC229B1250B008BDFB8 /* Schedule */,
@@ -158,8 +184,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				081BDB702A01367300E95B5B /* SourceLink.json in Resources */,
+				081BDB792A01396400E95B5B /* screen04.png in Resources */,
+				081BDB722A01385D00E95B5B /* Icon.png in Resources */,
+				081BDB7A2A01396400E95B5B /* screen02.png in Resources */,
+				081BDB7B2A01396400E95B5B /* screen03.png in Resources */,
 				08851BCB29B1250C008BDFB8 /* Preview Assets.xcassets in Resources */,
 				08851BC829B1250C008BDFB8 /* Assets.xcassets in Resources */,
+				081BDB782A01396400E95B5B /* screen01.png in Resources */,
 				081BDB6E2A005E4E00E95B5B /* Zaychik-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
