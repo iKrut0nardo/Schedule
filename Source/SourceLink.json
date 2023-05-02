@@ -4,8 +4,8 @@
     "subtitle": "All my apps in one place.",
     "description": "Welcome to my source! Here you'll find all of my apps.",
     "iconURL": "https://github.com/iKrut0nardo/Schedule/raw/master/Source/Icon.png",
-    "headerURL": "https://f000.backblazeb2.com/file/rileytestut/ExampleSource/OceanHeader.png",
-    "website": "https://example.com",
+    "headerURL": "https://github.com/iKrut0nardo/Schedule/raw/master/Source/headerUrl.png",
+    "website": "https://github.com/iKrut0nardo/Schedule",
     "tintColor": "#4185A9",
     "featuredApps": [
         "com.example.Schedule"
