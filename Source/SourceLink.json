@@ -20,41 +20,20 @@
       "iconURL": "https://f000.backblazeb2.com/file/rileytestut/ExampleSource/FishApp.png",
             "tintColor": "#5CA399",
       "screenshotURLs": [
-                "https://example.com/myapp_screenshot1.png",
-                "https://example.com/myapp_screenshot2.png",
-                "https://example.com/myapp_screenshot3.png"
+                "https://github.com/iKrut0nardo/Schedule/raw/master/Source/screen01.png",
+                "https://github.com/iKrut0nardo/Schedule/raw/master/Source/screen02.png",
+                "https://github.com/iKrut0nardo/Schedule/raw/master/Source/screen03.png",
+                "https://github.com/iKrut0nardo/Schedule/raw/master/Source/screen04.png"
             ],
             "versions": [
                 {
                     "version": "1.0-beta.0.1",
                     "date": "2023-05-02T09:00:00-08:00",
           "size": 20000000,
-          "downloadURL": "https://example.com/myapp_v1.1.ipa",
+          "downloadURL": "https://github.com/iKrut0nardo/Schedule/releases/download/v1.0-beta.0.1/Schedulev1.0-beta.0.1.ipa",
           "localizedDescription": "Beta version Schedule BrSTU.",
           "minOSVersion": "15.0"},
             ]
         }
-    ],
-    "news": [
-  {
-    "title": "New Feature Announcement",
-    "identifier": "new_feature",
-    "caption": "Introducing a new feature in AltStore!",
-    "date": "2023-03-15",
-    "tintColor": "#5CA399",
-    "imageURL": "https://example.com/new_feature_image.png",
-    "notify": true,
-    "url": "https://example.com/new_feature_details"
-    },
-  {
-    "title": "App Update Available",
-    "identifier": "app_update",
-    "caption": "An update is available for My Example App.",
-    "date": "2023-03-10T10:00:00-07:00",
-    "tintColor": "#3660A2",
-    "imageURL": "https://example.com/app_update_image.png",
-    "notify": false,
-      "appID": "com.example.myapp"
-  }
-  ]
-}
+    ]
+    
