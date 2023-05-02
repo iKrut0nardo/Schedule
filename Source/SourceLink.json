@@ -29,10 +29,12 @@
                 {
                     "version": "1.0-beta.0.1",
                     "date": "2023-05-02T09:00:00-08:00",
-          "size": 20000000,
-          "downloadURL": "https://github.com/iKrut0nardo/Schedule/releases/download/v1.0-beta.0.1/Schedulev1.0-beta.0.1.ipa",
-          "localizedDescription": "Beta version Schedule BrSTU.",
-          "minOSVersion": "15.0"},
+                    "size": 20000000,
+                    "downloadURL": "https://github.com/iKrut0nardo/Schedule/releases/download/v1.0-beta.0.1/Schedulev1.0-beta.0.1.ipa",
+                    "localizedDescription": "Beta version Schedule BrSTU.",
+                    "minOSVersion": "15.0"
+                    
+                },
             ]
         }
     ],
@@ -46,16 +48,6 @@
     "imageURL": "https://example.com/new_feature_image.png",
     "notify": true,
     "url": "https://example.com/new_feature_details"
-    },
-  {
-    "title": "App Update Available",
-    "identifier": "app_update",
-    "caption": "An update is available for My Example App.",
-    "date": "2023-03-10T10:00:00-07:00",
-    "tintColor": "#3660A2",
-    "imageURL": "https://example.com/app_update_image.png",
-    "notify": false,
-      "appID": "com.example.myapp"
-  }
+    }
   ]
 }
