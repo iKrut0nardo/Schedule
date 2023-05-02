@@ -3,7 +3,7 @@
     "identifier": "com.example.iKrut0nardo",
     "subtitle": "All my apps in one place.",
     "description": "Welcome to my source! Here you'll find all of my apps.",
-    "iconURL": "https://f000.backblazeb2.com/file/rileytestut/ExampleSource/OctoSource.png",
+    "iconURL": "https://github.com/iKrut0nardo/Schedule/raw/master/Source/Icon.png",
     "headerURL": "https://f000.backblazeb2.com/file/rileytestut/ExampleSource/OceanHeader.png",
     "website": "https://example.com",
     "tintColor": "#4185A9",
@@ -26,19 +26,12 @@
             ],
             "versions": [
                 {
-                    "version": "1.1",
-                    "date": "2022-05-01T09:00:00-08:00",
+                    "version": "1.0-beta.0.1",
+                    "date": "2023-05-02T09:00:00-08:00",
           "size": 20000000,
           "downloadURL": "https://example.com/myapp_v1.1.ipa",
-          "localizedDescription": "New features and bug fixes.",
-          "minOSVersion": "12.0"},
-                {
-                    "version": "1.0",
-                    "date": "2022-03-16T07:00:00-08:00",
-          "size": 10000000,
-          "downloadURL": "https://example.com/myapp_v1.0.ipa",
-          "localizedDescription": "Initial release."
-                }
+          "localizedDescription": "Beta version Schedule BrSTU.",
+          "minOSVersion": "15.0"},
             ]
         }
     ],

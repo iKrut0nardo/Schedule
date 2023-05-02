@@ -14,6 +14,7 @@
 		081BDB792A01396400E95B5B /* screen04.png in Resources */ = {isa = PBXBuildFile; fileRef = 081BDB752A01396400E95B5B /* screen04.png */; };
 		081BDB7A2A01396400E95B5B /* screen02.png in Resources */ = {isa = PBXBuildFile; fileRef = 081BDB762A01396400E95B5B /* screen02.png */; };
 		081BDB7B2A01396400E95B5B /* screen03.png in Resources */ = {isa = PBXBuildFile; fileRef = 081BDB772A01396400E95B5B /* screen03.png */; };
+		081BDB7D2A013B1400E95B5B /* headerUrl.png in Resources */ = {isa = PBXBuildFile; fileRef = 081BDB7C2A013B1400E95B5B /* headerUrl.png */; };
 		086CFAD529E171BF00F35977 /* NewsWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086CFAD429E171BF00F35977 /* NewsWebView.swift */; };
 		08851BC429B1250B008BDFB8 /* ScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08851BC329B1250B008BDFB8 /* ScheduleApp.swift */; };
 		08851BC629B1250B008BDFB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08851BC529B1250B008BDFB8 /* ContentView.swift */; };
@@ -33,6 +34,7 @@
 		081BDB752A01396400E95B5B /* screen04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen04.png; sourceTree = "<group>"; };
 		081BDB762A01396400E95B5B /* screen02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen02.png; sourceTree = "<group>"; };
 		081BDB772A01396400E95B5B /* screen03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen03.png; sourceTree = "<group>"; };
+		081BDB7C2A013B1400E95B5B /* headerUrl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headerUrl.png; sourceTree = "<group>"; };
 		08604C5A29DA349E00B5BC25 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		086CFAD429E171BF00F35977 /* NewsWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWebView.swift; sourceTree = "<group>"; };
 		08851BC029B1250B008BDFB8 /* Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 				081BDB742A01396400E95B5B /* screen01.png */,
 				081BDB762A01396400E95B5B /* screen02.png */,
 				081BDB772A01396400E95B5B /* screen03.png */,
+				081BDB7C2A013B1400E95B5B /* headerUrl.png */,
 				081BDB752A01396400E95B5B /* screen04.png */,
 			);
 			path = Source;
@@ -190,6 +193,7 @@
 				081BDB7A2A01396400E95B5B /* screen02.png in Resources */,
 				081BDB7B2A01396400E95B5B /* screen03.png in Resources */,
 				08851BCB29B1250C008BDFB8 /* Preview Assets.xcassets in Resources */,
+				081BDB7D2A013B1400E95B5B /* headerUrl.png in Resources */,
 				08851BC829B1250C008BDFB8 /* Assets.xcassets in Resources */,
 				081BDB782A01396400E95B5B /* screen01.png in Resources */,
 				081BDB6E2A005E4E00E95B5B /* Zaychik-Regular.ttf in Resources */,
