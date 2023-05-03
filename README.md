@@ -1,7 +1,11 @@
 # Shedule BrSTU app for IOS
 ### Work in progress
 
-*work in progress*
+Application schedule for students of the Brest State Technical University. 
+Works for group PO6 of specialty FEIS.
+
+- minimum OS version 15.0
+- support all iPhones
 
 # How to install app?
 
