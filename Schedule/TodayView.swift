@@ -123,8 +123,13 @@ struct TodayView: View {
                     content.body = "\(lesson.subjectName) в \(lesson.time) в аудитории \(lesson.roomNumber)"
                     content.sound = UNNotificationSound.default
                     let timeComponents = lesson.time.components(separatedBy: ":")
-                    let hour = Int(timeComponents[0]) ?? 0
-                    let minute = Int(timeComponents[1].prefix(2)) ?? 0
+                    var hour = Int(timeComponents[0]) ?? 0
+                    var minute = Int(timeComponents[1].prefix(2)) ?? 0
+                    minute -= 30 // уменьшаем значение на 30 минут
+                    if minute < 0 {
+                        hour -= 1
+                        minute += 60
+                    }
                     var dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: Date())
                     dateComponents.hour = hour
                     dateComponents.minute = minute
@@ -135,6 +140,7 @@ struct TodayView: View {
             }
         }
     }
+
     
 }
 
